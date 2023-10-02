@@ -15,4 +15,4 @@ app.use(bodyParser.urlencoded({extended: false}));
 const Routes = require("./routes/generate.js")
 
 app.use("/", Routes);
-app.listen(80)
+app.listen(process.env.PORT || 3000)
