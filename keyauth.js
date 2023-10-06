@@ -72,10 +72,6 @@ class KeyAuth {
     this.check_initialize()
 
     let hwId
-    if (!hwId) {
-      hwId = Misc.GetCurrentHardwareId()
-    }
-
     const post_data = {
       type: 'register',
       username: user,
@@ -157,10 +153,7 @@ class KeyAuth {
   license = (key) => new Promise(async (resolve) => {
     this.check_initialize()
 
-    let hwId
-    if (!hwId) {
-      hwId = Misc.GetCurrentHardwareId()
-    }
+    let hwId = "WEBAPPDCBHJKGAZGHKDG"
 
     const post_data = {
       type: 'license',
