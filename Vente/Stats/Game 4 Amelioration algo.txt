@@ -1,0 +1,43 @@
+STRATEGY = NEVER FOLLOW HALF/ALLINS
+£ = Si j'aurai pas fold j'aurai loose
+
+
+TAUX WINRATE = 75% (Sans les EQUALS)
+START BALANCE = 2000
+END BALANCE = 7160
+PLUS VALUE = 258%
+LOSES = 3
+EQUALS = 16
+WINS = 9
+
+
+DECISIONS : 
++ 19 > FOLLOW (2d7d) Table : (2h,7c ...)
+- 10 > FOLD £(8d8h) (FOLLOW STRAT MAIS BLUFF)
++ 1455 > FOLLOW (K et jsp koi)
+= > FOLD £(Js4d) (+ FOLLOW STRAT)
++ 228 > FOLLOW, FOLLOW (Qs10d)
+= > FOLD £(Js9c)
+= > FOLD £(8c7c)
+= > FOLD (2h7c)
+= > FOLD £(Follow strategy)
+= > FOLD£
+FDP EGALITé > FOLLOW (Kd2d)
++ 2557 > BET (Ah et jsp koi mais en tt cas g bz)
+=  > Fold £(6d8h)
+= > FOLD £(9d4h)
++ 19 > FOLLOW (Kd2s)
++ 320 > BET (JhAd)
+= > FOLD (7d10d)
+= > FOLD £(7s9d)
+- 30 > FOLLOW (Qh5d)
+= > FOLD £ (2s5h)
++474 > FOLLOW (Ks7S) Table : (7h, Kc)
+= > FOLD £(9h10d)
+= > FOLD £(6d4d)
+= > FOLD  £(2c10d)
++ 15 (Egalité btr)> FOLLOW (Ks8c)
+= > FOLD  £(3d8d)
++ 133 > FOLLOW (9c5h) (9 sur la table)
+- 20 > FOLLOW (Kc6h)
+= > FOLD  £ (Jh5d)

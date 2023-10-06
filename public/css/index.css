@@ -47,7 +47,19 @@ body {
   .login-box .user-box {
     position: relative;
   }
+  .divider {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
   
+  .divider::before, .divider::after {
+    flex: 1;
+    content: '';
+    padding: 1px;
+    background-color: rgb(78, 78, 78);
+    margin: 5px;
+  }
   .login-box .user-box input {
     width: 100%;
     padding: 10px 0;

@@ -1,13 +1,37 @@
 
-const { getCardValue } = require("../utils/converts")
+const { getCardValue } = require("../utils/converts");
+const { arraysEqual } = require("../utils/utils");
+
+function getOccurrence(array, value) {
+    var count = 0;
+    array.forEach((v) => (v === value && count++));
+    return count;
+}
+
+
 
 exports.isRoyalFlush = (hand) => {
-    const royalFlush = ["10", "J", "Q", "K", "A"];
-    const suits = new Set(hand.map(card => card.slice(-1))); // Obtient les couleurs
 
-    if (suits.size === 1 && royalFlush.every(value => hand.includes(value + suits.values().next().value))) {
+    const t1 = ["D", "D", "D", "D", "D"]
+    const t2 = ["H", "H", "H", "H", "H"]
+    const t3 = ["C", "C", "C", "C", "C"]
+    const t4 = ["S", "S", "S", "S", "S"]
+    const tt1 = hand[0].charAt(hand[0].length-1)
+    
+    const types = hand.map(card => card.charAt(card.length-1));
+    const suits = hand.map(card => card.slice(0, -1));
+    if (
+        suits.includes("J") &&
+        suits.includes("K") && 
+        suits.includes("A") && 
+        suits.includes("Q") && 
+        suits.includes("10") &&
+        getOccurrence(types,tt1) > 4
+    ) {
         return true;
     }
+
+
     return false;
 }
 
@@ -53,7 +77,7 @@ exports.detectPairTwoPairThreeOfAKind = (cards) => {
     
     // Compter le nombre d'occurrences de chaque valeur de carte
     for (const card of cards) {
-        const cardValue = card.charAt(0);
+        const cardValue = card.slice(0, -1);
         if (cardCount[cardValue]) {
             cardCount[cardValue]++;
         } else {
@@ -87,4 +111,20 @@ exports.detectPairTwoPairThreeOfAKind = (cards) => {
     } else {
         return "Aucune combinaison";
     }
+}
+
+
+exports.detectAll = (cards) => {
+
+    
+    if(this.isRoyalFlush(cards)){
+        return "ROYAL FLUSH"
+    }else if(this.isFourOfAKind(cards)){
+        return "4 OF A KIND"
+    }else if(this.isFullHouse(cards)){
+        return "FULL"
+    }else if(this.detectPairTwoPairThreeOfAKind(cards) != "Aucune combinaison"){
+        return this.detectPairTwoPairThreeOfAKind(cards)
+    }
+    return "HIGH CARDS"
 }

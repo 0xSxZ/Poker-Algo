@@ -1,0 +1,29 @@
+STRATEGY = NEVER FOLLOW HALF/ALLINS
+£ = Si j'aurai pas fold j'aurai loose
+
+
+START BALANCE = 800
+END BALANCE = 1016
+LOSES = 8
+EQUALS = 1
+WINS = 8
+
+
+DECISIONS : 
++ 45 > FOLLOW
++ 8> FOLLOW
+= > FOLD £
+- 7 > FOLLOW
++ ?? > FOLLOW
+- 2 > FOLD £
++ 950 > FOLLOW (Break strategy)
+- 11 > FOLLOW
+- 4 > FOLD £
++16 > BET
++8 > FOLLOW
+- 300 > FOLLOW, BET (Break strategy) (Oui je suis un singe d'avoir break)
+- 4 > FOLD (follow strategy (il avait all in))
+- 4 > FOLD £
++ 50 > BET
+- 4 > FOLD £
++ 2> FOLLOW (Il a fold)

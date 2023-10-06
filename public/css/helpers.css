@@ -1,0 +1,12 @@
+
+.cContainer{
+    width: 15%; 
+    height: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cContainer > img {
+    width: 18%;
+    display: inline-block;
+}

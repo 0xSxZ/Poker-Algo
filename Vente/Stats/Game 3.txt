@@ -1,0 +1,31 @@
+STRATEGY = NEVER FOLLOW HALF/ALLINS
+£ = Si j'aurai pas fold j'aurai loose
+
+WALLAH C TROP CETTE SESSIONS GUETTEZ LES MAINS DE MRD
+
+
+TAUX WINRATE = 100%
+START BALANCE = 2000
+END BALANCE = 
+LOSES = 
+EQUALS = 
+WINS = 
+
+
+DECISIONS : 
+= > FOLD £ (Jd8d)
+= > FOLD £ (8h2s)
+= > FOLD £ (8h10s)
+= > FOLD £ (10s3d)
+= > FOLD £ (2c3c)
++ 194 > CALL (Qd5d)
+= > FOLD £ (6h2h)
+= > FOLD £ (9c4h)
+= > FOLD £ (9c7c)
+= > FOLD £ (4h7h)
+-15 > FOLLOW (Kc8d) (FOLD £ A CAUSE DE LA STRAT)
++ 38 > FOLLOW (KcJd)
+= > FOLD £ (10s5c)
+= > FOLD £ (9s3d)
+= > FOLD £ (2c6h)
+- 30 > FOLLOW (Kc2s) (FOLD £ A CAUSE DE LA STRAT)
