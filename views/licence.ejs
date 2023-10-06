@@ -95,6 +95,20 @@
 
 
                 <form class="login-box" method="POST" action="/api/addLicence" id="stripe-login" >
+                  <div class="errbox" id="errbox" style="margin-bottom: 20px; padding: 15px; text-align: center; color: white;"></div>
+                  <script>
+                    var msg = "<%= message %>"
+                    var color = "<%= color %>"
+                    if(msg != undefined || msg != "undefined"){
+                      document.getElementById("errbox").innerHTML = msg
+                    }
+                    if(color == "green"){
+                      errbox.style.backgroundColor = "rgb(18, 197, 18)"
+                    }else if(color == "red"){
+                      errbox.style.backgroundColor = "rgb(255, 104, 104)"
+                      
+                    }
+                  </script>
                   <div class="field padding-bottom--24">
                     <input name="licence" placeholder="Licence">
                   </div>

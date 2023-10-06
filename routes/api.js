@@ -2,7 +2,7 @@ const express = require("express");
 const cfr = require("../cfr/cfr");
 const KeyAuth = require('../keyauth');
 const { GetDb } = require("../utils/database");
-
+const path = require("path")
 const KeyAuthApp = new KeyAuth(
     'Pokia',      // Application Name
     '4uK4Vz3LBD',     // Application OwnerId
@@ -14,7 +14,7 @@ const router = express.Router()
 
 router.use("/addLicence", async (req, res, next) => {
 
-    if(!req.body.licence)   return res.render("/licence", {message:"Please enter a licence"})
+    if(!req.body.licence)   return res.render(path.join(__dirname, "../views/licence.ejs"), {message:"Please enter a licence", color:"red"})
     try{
         await KeyAuthApp.Initialize();
         const b = await KeyAuthApp.license(req.body.licence);
@@ -24,14 +24,14 @@ router.use("/addLicence", async (req, res, next) => {
             req.session.free = false
         }else if(b.includes("ERR")){
             req.session.free = true
-            return res.send({"ERROR":"INVALID LICENCE"});
+            return res.render(path.join(__dirname, "../views/licence.ejs"), {message:"INVALID LICENCE", color:"red"})
         }else if(!b.success){
             req.session.free = true
-            return res.send({"ERROR":"INVALID LICENCE"});
+            return res.render(path.join(__dirname, "../views/licence.ejs"), {message:"INVALID LICENCE", color:"red"})
         }
-        return res.render("/licence", {message:"LICENCE SUCCESSFULY ADDED", color:"green"})
+        return res.render(path.join(__dirname, "../views/licence.ejs"), {message:"LICENCE SUCCESSFULY ADDED", color:"green"})
     }catch{
-        return res.render("/licence", {message:"INTERNAL SERVER ERROR", color:"red"})
+        return res.render(path.join(__dirname, "../views/licence.ejs"), {message:"INTERNAL SERVER ERROR", color:"red"})
     }
 })
 

@@ -18,7 +18,7 @@ router.use("/helpers", (req, res, next) => {
 })
 
 router.use("/licence", (req, res, next) => {
-    res.render(path.join(__dirname, "../views/licence.ejs"), {message:undefined})
+    res.render(path.join(__dirname, "../views/licence.ejs"), {message:undefined, color:undefined})
 })
 
 router.get("/", (req, res, next) => {
