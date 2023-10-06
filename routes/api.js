@@ -18,7 +18,7 @@ router.use("/addLicence", async (req, res, next) => {
     try{
         await KeyAuthApp.Initialize();
         const b = await KeyAuthApp.license(req.body.licence);
-        console.log(b)
+        console.log(b, req.body.licence)
         if(b.success){
             req.session.licence = req.body.licence;
             req.session.free = false
