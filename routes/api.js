@@ -29,8 +29,9 @@ router.use("/addLicence", async (req, res, next) => {
             req.session.free = true
             return res.send({"ERROR":"INVALID LICENCE"});
         }
+        return res.render("/licence", {message:"LICENCE SUCCESSFULY ADDED", color:"green"})
     }catch{
-        return res.render("/licence", {message:"INTERNAL SERVER ERROR"})
+        return res.render("/licence", {message:"INTERNAL SERVER ERROR", color:"red"})
     }
 })
 
