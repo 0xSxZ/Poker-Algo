@@ -4,8 +4,7 @@
   "description": "test",
   "main": "app.js",
   "scripts": {
-    "start": "echo \"Launching script\" && node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "author": "Yazid",
   "license": "ISC",
