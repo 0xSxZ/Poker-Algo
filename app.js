@@ -4,6 +4,7 @@ const fs = require("fs")
 const path = require("path")
 var session = require('express-session')
 const { MongoConnect } = require("./utils/database.js");
+console.log("[+] Main file initiated")
 
 var sess = {
     secret: 'SECRE333TUHQf135z153daz645daz**',
@@ -26,4 +27,6 @@ app.use("/api", ApiRoutes);
 
 MongoConnect(() => {
 })
+
 app.listen(80)
+console.log("[+] API Listening")
