@@ -1,7 +1,14 @@
 {    
+  "name": "pokia",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "app.js",
   "scripts": {
-      "start": "node app.js"
-   },
+    "start": "echo \"Launching script\" && node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yazid",
+  "license": "ISC",
   "dependencies": {
     "api-key-auth": "^0.2.3",
     "axios": "^1.5.1",
