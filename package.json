@@ -1,6 +1,6 @@
 {    
   "scripts": {
-      "start": "node ./app.js"
+      "start": "node app.js"
    },
   "dependencies": {
     "api-key-auth": "^0.2.3",
