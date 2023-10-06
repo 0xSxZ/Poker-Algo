@@ -178,11 +178,12 @@ class KeyAuth {
     if(!Json){
       return resolve("ERR NO JSON")
     }
+
     if (Json.success && Json.success == true) {
       this.Load_User_Data(Json.info)
       return resolve(Json)
     } else {
-      return resolve("ERR SUCCCESS = FALSE", Json)
+      return resolve("ERR SUCCCESS = FALSE JSON : " + Json)
       Misc.error(Json.message)
     }
   })
