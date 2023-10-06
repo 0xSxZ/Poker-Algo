@@ -183,7 +183,7 @@ class KeyAuth {
       this.Load_User_Data(Json.info)
       return resolve(Json)
     } else {
-      return resolve("ERR SUCCESS = FALSE JSON : " + Json)
+      return resolve("ERR SUCCESS = FALSE JSON : " + JSON.stringify(Json))
       Misc.error(Json.message)
     }
   })
